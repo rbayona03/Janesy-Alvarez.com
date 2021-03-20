@@ -1,0 +1,85 @@
+<main class="overlay">
+			<nav class="navbar">
+				<div class="navLnks">
+					<ul>
+						<li><a href="mainpage.html"><img src="images/LogoMakr-57vLhN.png" class="logo"/></a></li>
+					</ul>
+				</div>
+				<div class="dropdown">
+					<button onclick="myFunction()" class="dropbtn"><i class="fas fa-bars"></i></button>
+					<div id="myDropdown" class="dropdown-content">
+					<a href="index.html"><i class="fas fa-home"> Home</i></a>
+					<a href="#abtCrd"><i class="fas fa-book"> My story/Career</i></a>
+					<a  href="mailto:@gmail.com" title="Email Janesy"><i class="far fa-envelope"> Email</i></a>
+					<a  href="https://www.linkedin.com/in/janesyalvarez/" title="Find me On Linkedin"target="_blank"><i class="fab fa-linkedin-in"> LinkedIn</i></a>
+					<a href="./data/JanesyAlvarezResume2020.pdf" download="Resume" id="resume" title="Download my resume" ><i class="far fa-file-alt"> Resume.pdf</i></a>
+					</div>
+				</div>		
+			</nav>
+			
+			<section class="content">
+				<div class="title">
+					<H1>Janesy Alvarez</H1>
+					<h3>Paralegal</h3>
+				</div>
+				<div class="cntImg"></div>
+			</section>
+
+			<div id="abtCrd"class="abtCrd">
+				<div class="abtInfo">
+					<h1>My story</h1>
+					<p>Dynamic and Resourceful Legal Assistant for 4 years with an Administrative background for 8 years of experience and proven history of providing comprehensive support and continually exceeding employer/client expectations. Proven ability to implement process improvements that boost efficiency and productivity.</p>
+					<p>Currently Attending College to become a Certified Paralegal.</p>
+				</div>
+			</div>
+			<h1 class="jbTitle">Career</h1>
+
+			<div class="timeline">
+				<div class="timelineChld">
+					<h3 class="timelineCnt">Legal Assistant</h3>
+					<h4>Celler law, P.A</h4><br>
+					<h5>Feb 2021-Present</h5><br>	
+					<h5>Miami, Fl</h5>			
+				</div>
+
+				<div class="timelineChld">
+					<h3 class="timelineCnt">Legal Assistant</h3>
+					<h4>Anthon & Vasallo, PLLC</h4>
+					<h5>Feb 2019 - Apr 2019</h5>
+					<h5>Homestead, Fl</h5>							
+				</div>
+				
+				<div class="timelineChld">
+					<h3 class="timelineCnt">Utility Worker</h3>
+					<h4>Turkey Point, FPL</h4>
+					<h5>Oct 2016 - Jun 2018</h5>
+					<h5>Miami, Fl</h5>			
+				</div>
+
+				<div class="timelineChld">
+					<h3 class="timelineCnt">Contact Administrator</h3>
+					<h4>OPKO Health, Inc.</h4>
+					<h5>Oct 2016 - Jun 2018</h5>
+					<h5>Miami, Fl</h5>			
+				</div>
+
+				<div class="timelineChld">
+					<h3 class="timelineCnt">Senior Administrator</h3>
+					<h4>Ryder System, Inc</h4>
+					<h5>Dec 2014- Aug 2016</h5>
+					<h5>Doral, Fl</h5>			
+				</div>
+
+				<div class="timelineChld">
+					<h3 class="timelineCnt">HR Training</h3>
+					<h4>Ocean Reef Club</h4>
+					<h5>Nov 2013 - Dec 2014</h5>
+					<h5>KeY Largo, Fl</h5>			
+				</div>
+	
+			</div>
+			<section id="footer">
+
+			</section>
+		</main>
+		<script src="script.js"></script>

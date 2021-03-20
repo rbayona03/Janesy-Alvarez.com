@@ -4,28 +4,35 @@
 
 <html lang="en">
 	<head>
-		<title></title>
+		<title>Janesy Alvarez</title>
 		
 		
 		<meta charset="UTF-8" />
-		<meta name="Web authoring" content="This is a website that uses HTML and CSS." />
+		<meta name="Web authoring" content="This is a website that uses HTML and SCSS." />
 		<meta name="viewport" content="width=device-width, intial-scale=1" />
 		<meta name="author" content="roberto Bayona" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />		
-		<link rel="stylesheet" href="css/Stylesheet.css"/>
+		<link rel="stylesheet" href="./styles/style.css"/>
 	</head>
 	
-	<body>
-		<main class="banner">
+	<body class="banner">
+		<main class="overlay">
 			<nav class="navbar">
-				<a href="mainpage.html"><img src="images/LogoMakr-6X0YVO.png" class="logo"/></a>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="portfolio.html">Professional</a></li>
-					<li><a href="about.html">My Story</a></li>
-
-				</ul>
-				<i class="fas fa-toggle-off"></i>
+				<div class="navLnks">
+					<ul>
+						<li><a href="mainpage.html"><img src="images/LogoMakr-57vLhN.png" class="logo"/></a></li>
+					</ul>
+				</div>
+				<div class="dropdown">
+					<button onclick="myFunction()" class="dropbtn"><i class="fas fa-bars"></i></button>
+					<div id="myDropdown" class="dropdown-content">
+					<a href="index.html"><i class="fas fa-home"> Home</i></a>
+					<a href="#abtCrd"><i class="fas fa-book"> My story/Career</i></a>
+					<a  href="mailto:@gmail.com" title="Email Janesy"><i class="far fa-envelope"> Email</i></a>
+					<a  href="https://www.linkedin.com/in/janesyalvarez/" title="Find me On Linkedin"target="_blank"><i class="fab fa-linkedin-in"> LinkedIn</i></a>
+					<a href="./data/JanesyAlvarezResume2020.pdf" download="Resume" id="resume" title="Download my resume" ><i class="far fa-file-alt"> Resume.pdf</i></a>
+					</div>
+				</div>		
 			</nav>
 			
 			<section class="content">
@@ -33,34 +40,127 @@
 					<H1>Janesy Alvarez</H1>
 					<h3>Paralegal</h3>
 				</div>
-				<img src="images/pexels-marcus-aurelius-4064174.jpg" alt="self potrait">
-				<ul>
-					<a href="portfolio.html"><li>Next</li><i class="fas fa-chevron-right"></i></a>
-					<button type="button">Contact</button>
-				</ul>
+				<div class="cntImg"></div>
 			</section>
-			<footer>
-				<div class="footercontent">
-					<h3>Social</h3>
-					<ul class="social">
 
-						<li><a href="https://www.linkedin.com/in/robertobayona03/" download="Resume"><img src="/images/linkedin.png"/></a></li>
-						<li><a href="https://github.com/rbayona03/" target="_blank"><img src="/images/github.png"/></a></li>
-						<li><a href="mailto: Bayor4@mail.broward.edu" title="Email Roberto Directly"><img src="/images/gmail.png"/></a></li>
-					</ul>
-					<p class="copyright"><small>copyright 2021 Roberto Bayona</small></p>
+			<div id="abtCrd"class="abtCrd">
+				<div class="abtInfo">
+					<h1>My story</h1>
+					<p>Hello im Janesy,<br>
+					A dedicated and highly skilled professional with 4 years<br>
+					of experience as a legal assistant and 8 years of<br>
+					administrative experience. I have a passion<br>
+					for meticulous research and creative problem solving to<br>
+					produce successful legal outcomes for employers and clients.<br>
+					</p>
+					<p>
+					I am currently attending FIU to become a Certified Paralegal;<br>
+					with a program completion in summer 2021.</p>
 				</div>
-			</footer>
+			</div>
+			<h1 class="jbTitle">Career</h1>
+
+			<div class="timeline">
+				<div class="centerLine"></div>
+				<div class="row row1">
+					<i class="icon fas fa-gavel"></i>
+
+					<section>
+						<div class="details">
+							<span>
+								<h3 class="timelineCnt">Legal Assistant</h3>
+								<h4>Celler law, P.A</h4><br>
+								<h5>Feb 2021-Present</h5><br>	
+								<h5>Miami, Fl</h5>
+							</span>
+						</div>
+					</section>
+				</div>
+
+
+				<div class="row row2">
+					<i class="icon fas fa-gavel"></i>
+
+					<section>
+						<div class="details">
+							<span>
+								<h3 class="timelineCnt">Legal Assistant</h3>
+								<h4>Anthon & Vasallo, PLLC</h4>
+								<h5>Feb 2019 - Apr 2019</h5>
+								<h5>Homestead, Fl</h5>
+							</span>
+						</div>
+					</section>
+				</div>
+				<div class="row row1">
+					<i class="icon far fa-lightbulb"></i>
+
+					<section>
+						<div class="details">
+							<span>
+								<h3 class="timelineCnt">Utility Worker</h3>
+								<h4>Turkey Point, FPL</h4>
+								<h5>Oct 2016 - Jun 2018</h5>
+								<h5>Miami, Fl</h5>
+							</span>
+						</div>
+					</section>
+				</div>
+				<div class="icon row row2">
+					<i class="icon fas fa-file-contract"></i>
+
+					<section>
+						<div class="details">
+							<span>
+								<h3 class="timelineCnt">Contact Administrator</h3>
+								<h4>OPKO Health, Inc.</h4>
+								<h5>Oct 2016 - Jun 2018</h5>
+								<h5>Miami, Fl</h5>
+							</span>
+						</div>
+					</section>
+				</div>
+				<div class="row row1">
+					<i class="icon fas fa-user-cog"></i>
+
+					<section>
+						<div class="details">
+							<span>
+								<h3 class="timelineCnt">Senior Administrator</h3>
+								<h4>Ryder System, Inc</h4>
+								<h5>Dec 2014- Aug 2016</h5>
+								<h5>Doral, Fl</h5>	
+							</span>
+						</div>
+					</section>
+				</div>
+				<div class="row row2">
+					<i class="icon fas fa-user-friends"></i>
+
+					<section>
+						<div class="details">
+							<span>
+								<h3 class="timelineCnt">HR Training</h3>
+								<h4>Ocean Reef Club</h4>
+								<div class="btmRow">
+									<h5>Nov 2013 - Dec 2014</h5>
+									<h5>KeY Largo, Fl</h5>
+								</div>
+							</span>
+						</div>
+					</section>
+				</div>
+				
+			</div>
+			<section id="footer">
+					<h1>Social</h1>
+					<ul>
+						<li><a href="https://www.linkedin.com/in/janesyalvarez/"><i class="fab fa-linkedin"></i></a></li>
+						<li><a href="mailto:janesya93@aol.com" title="Email Janesy"><i class="far fa-envelope"></i></a></li>
+					</ul>
+					<p><em>copyright 2021 Roberto Bayona</em></p>
+			</section>
 		</main>
-
-
-
+		<script src="script.js"></script>
 	</body>
-        
-			
-	
-    
-    
-    
-  
 </html>
