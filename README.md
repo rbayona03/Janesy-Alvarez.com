@@ -17,6 +17,6 @@ This is a Simple landing page built on Javascript, SASS & HTML.
  
  - Education and skills cards were added from more page content
  - slide in menu replaced outdated drop down menu was removed
- - responsice bugs were fixed
+ - responsive bugs were fixed
  - The about me section was converted into JSX object to 
     add client props as wellas well as bug fix on <p> tag.
