@@ -10,121 +10,107 @@ html {
   color: #edf6f9;
 }
 
+.navbar_mobile {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #72b2abdc;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  overflow: hidden;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.navbar_mobile .menuHero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-bottom: 1px white solid;
+  width: 95%;
+  margin: 10px auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.menuTab {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  z-index: 1000;
+  font-size: 36px;
+  background-color: #006d77;
+  padding: 12px;
+  border-radius: 50%;
+}
+
+.navHero_mobile {
+  height: 80px;
+  width: 80px;
+}
+
+.navLinks_container_mobile {
+  height: 100vh;
+}
+
+.navLinks_container_mobile .navLinks_mobile {
+  list-style: none;
+  text-decoration: none;
+  margin: 25px 15px;
+}
+
+.navLinks_container_mobile .navLinks_mobile .navLink_mobile {
+  margin: 10px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.navLinks_container_mobile .navLinks_mobile .navLink_mobile a {
+  text-decoration: none;
+}
+
+.navLink_mobile::before {
+  position: absolute;
+  content: '';
+  width: 50%;
+  border-bottom: 33px solid #006d77;
+  border-right: 45px solid transparent;
+  z-index: -1;
+}
+
+.Show {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
 body {
+  width: 100%;
   position: relative;
-  z-index: -10;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(128, 128, 128, 0.041)), to(rgba(0, 0, 0, 0.014))), url(/images/mountain.jpg);
-  background: linear-gradient(rgba(128, 128, 128, 0.041), rgba(0, 0, 0, 0.014)), url(/images/mountain.jpg);
+  background: url(/images/mountain.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
 
-body ::after {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#5e5c5c5b), to(#9db6c593));
-  background: linear-gradient(#5e5c5c5b, #9db6c593);
-}
-
-/*.overlay {
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(#5e5c5ca9, #9db6c593);
-  }
-}*/
-.logo {
-  height: 80px;
-  width: 80px;
-}
-
-.navbar {
-  width: 80%;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.navbar .navLnks {
-  width: 100%;
-}
-
-.navbar .navLnks ul {
-  list-style: none;
-}
-
-.navbar .dropbtn {
-  background-color: #72b2ab;
-  color: #edf6f9;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  border-radius: 10px;
-  -webkit-transition: 125ms ease-in;
-  transition: 125ms ease-in;
-}
-
-.navbar .dropbtn:hover,
-.navbar .dropbtn:focus {
-  background-color: #006d77;
-}
-
-.navbar .dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.navbar .dropdown-content {
-  display: none;
-  position: absolute;
-  min-width: 160px;
-  overflow: auto;
-  z-index: 1;
-  -webkit-transform: translateX(-68%);
-          transform: translateX(-68%);
-}
-
-.navbar .dropdown-content a {
-  color: #edf6f9;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  margin: 5px;
-  background: #72b2ab;
-  border-radius: 10px;
-  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  -webkit-transition: 125ms ease-in;
-  transition: 125ms ease-in;
-}
-
-.navbar .dropdown-content a i {
-  color: #edf6f9;
-}
-
-.navbar .dropdown a:hover {
-  background-color: #006d77;
-}
-
-.navbar .show {
-  display: block;
-}
-
 .content {
   width: 100%;
-  height: 70vh;
+  height: 55vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,16 +130,28 @@ body ::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 70%;
+  width: 90%;
+  height: 7vh;
+  position: relative;
+  padding: .5rem;
 }
 
 .content .title h1 {
   font-size: 36px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.content .title h3 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .content .cntImg {
-  height: 50vh;
-  width: 70%;
+  height: 40vh;
+  width: 100%;
   background-image: url(/images/signal-2021-03-11-160636.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -162,6 +160,8 @@ body ::after {
   transition: 300ms ease-in;
   -webkit-filter: grayscale(80%);
           filter: grayscale(80%);
+  border-top: 1.5px solid #edf6f9;
+  border-bottom: 1.5px solid #edf6f9;
 }
 
 .content .cntImg:hover {
@@ -172,7 +172,7 @@ body ::after {
 }
 
 .abtCrd {
-  max-width: 50%;
+  max-width: 80%;
   min-height: 20vh;
   margin: auto;
   padding: 15px;
@@ -186,12 +186,48 @@ body ::after {
 .abtCrd .abtInfo {
   position: relative;
   margin: auto;
-  width: 80%;
+  max-width: 100%;
 }
 
 .abtCrd .abtInfo p {
   font-size: 16px;
   letter-spacing: 1.2px;
+}
+
+.education {
+  margin: 40px;
+}
+
+.education .eduCard {
+  width: 80%;
+  margin: 10px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 22px;
+}
+
+.education h2, .education ul {
+  text-align: center;
+}
+
+.education ul {
+  list-style: none;
+}
+
+.education .cardHero {
+  width: 175px;
+  height: 175px;
 }
 
 .jbTitle {
@@ -203,22 +239,26 @@ body ::after {
 }
 
 .timeline {
-  max-width: 1080px;
-  margin: 50px auto;
-  padding: 0 20px;
+  margin: auto;
+  max-width: 95%;
+  padding-bottom: 5rem;
 }
 
 .timeline .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .timeline .row section {
   background-color: #72b2ab;
   border-radius: 5px;
-  width: calc(40% - 40px);
+  width: calc(80% - 10px);
   padding: 10px;
+  margin: 5px;
   position: relative;
   color: #006d77;
 }
@@ -230,6 +270,7 @@ body ::after {
   width: 15px;
   background: #72b2ab;
   top: 25px;
+  left: -7px;
   border-radius: 1px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -244,6 +285,9 @@ body ::after {
   line-height: 40px;
   z-index: 9;
   border-radius: 50px;
+  left: 2%;
+  -webkit-transform: translateY(35%);
+          transform: translateY(35%);
 }
 
 .timeline .row .btmRow {
@@ -254,46 +298,14 @@ body ::after {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 5px;
-}
-
-.timeline .row1 {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  color: #006d77;
-}
-
-.timeline .row1 ::before {
-  right: -7px;
-}
-
-.timeline .row1 .icon {
-  right: 50%;
-  -webkit-transform: translateX(55%);
-          transform: translateX(55%);
-}
-
-.timeline .row2 {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.timeline .row2 ::before {
-  left: -7px;
-}
-
-.timeline .row2 .icon {
-  left: 50%;
-  -webkit-transform: translateX(-45%);
-          transform: translateX(-45%);
+  color: #e2ece5;
 }
 
 .timeline .centerLine {
   position: absolute;
-  height: 33%;
+  height: 40%;
   width: 4px;
-  left: 50%;
+  left: 6%;
   background: #72b2ab;
   -webkit-transform: translate(50%, -5%);
           transform: translate(50%, -5%);
@@ -341,5 +353,121 @@ body ::after {
   color: #72b2ab;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
+}
+
+@media only screen and (min-width: 767px) {
+  .navbar {
+    width: 80%;
+  }
+  .navbar .dropbtn {
+    font-size: 28px;
+  }
+  .content {
+    width: 85%;
+    margin: auto;
+  }
+  .content .cntImg {
+    border: none;
+  }
+  .abtCrd {
+    max-width: 60%;
+  }
+  .timeline {
+    max-width: 1080px;
+  }
+  .timeline .row {
+    width: 85%;
+    margin: auto;
+  }
+  .timeline .row section {
+    width: 40%;
+  }
+  .timeline .row1 {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    color: #006d77;
+  }
+  .timeline .row1 section ::before {
+    display: none;
+  }
+  .timeline .row1 section .details {
+    width: 100%;
+  }
+  .timeline .row1 section .details ::after {
+    position: absolute;
+    content: " ";
+    height: 15px;
+    width: 15px;
+    top: 25px;
+    right: -7;
+    z-index: 99;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    background-color: #72b2ab;
+  }
+  .timeline .row1 .icon {
+    left: 48%;
+  }
+  .timeline .row1 ::after {
+    right: -7px;
+  }
+  .timeline .row2 {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .timeline .row2 .icon {
+    left: 48%;
+  }
+  .timeline .centerLine {
+    left: 51%;
+    height: 30%;
+    -webkit-transform: translate(5%, 0);
+            transform: translate(5%, 0);
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .abtCrd {
+    width: 50%;
+  }
+  .abtCrd h2 {
+    text-align: center;
+  }
+  .abtCrd .abtInfo p {
+    font-size: 20px;
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+  }
+  .eduCard_cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .eduCard_cont h2 {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .timeline .centerLine {
+    left: 50%;
+    height: 30%;
+    -webkit-transform: translate(2%, 0);
+            transform: translate(2%, 0);
+  }
+  .timeline .row .icon {
+    left: 49%;
+    -webkit-transform: translateX(-1%);
+            transform: translateX(-1%);
+  }
 }
 /*# sourceMappingURL=style.css.map */
